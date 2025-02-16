@@ -2,8 +2,11 @@
 body {
     font-family: 'Arial', sans-serif;
     text-align: center;
-    background-color: #dbe7f3; /* Light Blue Background */
+    background: url('rm118-ken-12.jpg') no-repeat center center fixed;
+    background-size: cover; /* Ensures full coverage */
     color: #000;
+    margin: 0;
+    padding: 0;
 }
 
 /* Name Styling */
@@ -29,22 +32,25 @@ h1 {
 /* Icon Section */
 .icon-container {
     display: flex;
-    flex-direction: column; /* Ensures vertical alignment */
+    justify-content: center;  /* Center icons horizontally */
     align-items: center;
-    gap: 20px;
+    gap: 40px;
     margin-top: 30px;
 }
 
+/* Icon Styling */
 .icon-box {
     display: flex;
     flex-direction: column;
     align-items: center;
     font-size: 20px;
-    color: #007BFF; /* Blue color */
+    color: #007BFF;
     cursor: pointer;
-    opacity: 0; /* Initially hidden */
-    transform: translateY(20px);
-    transition: transform 0.5s ease, opacity 0.5s ease;
+    transition: transform 0.3s ease;
+}
+
+.icon-box:hover {
+    transform: scale(1.1);
 }
 
 .icon-box i {
@@ -57,14 +63,14 @@ h1 {
     font-size: 18px;
 }
 
-/* Animation for Fade-in Effect */
+/* Fade-in Animation */
 .fade-in {
     opacity: 0;
     transform: translateY(20px);
     animation: fadeInUp 0.5s forwards;
 }
 
-/* Keyframes for Smooth Entry */
+/* Keyframes */
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -75,9 +81,3 @@ h1 {
         transform: translateY(0);
     }
 }
-
-/* Delayed Animations */
-.icon-box:nth-child(1) { animation-delay: 0.5s; }
-.icon-box:nth-child(2) { animation-delay: 1s; }
-.icon-box:nth-child(3) { animation-delay: 1.5s; }
-.icon-box:nth-child(4) { animation-delay: 2s; }

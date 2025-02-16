@@ -8,14 +8,10 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-image: url('rm118-ken-12.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    background: url('rm118-ken-12.jpg') no-repeat center center/cover;
     color: #1e1e1e;
     position: relative;
 }
-
 
 /* Add overlay for better readability */
 body::before {
@@ -43,12 +39,15 @@ h1 {
 }
 
 /* Subtitle */
-.subtitle {
+p {
     font-size: 24px;
     font-weight: 300;
 }
 
-.subtitle span {
+/* Changing text effect */
+#changing-text {
     font-weight: bold;
     color: #007bff;
+    display: inline-block;
+    transition: opacity 0.5s ease-in-out;
 }

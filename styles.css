@@ -1,19 +1,19 @@
-/* General Styles */
-body, html {
+/* Apply background image */
+body {
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
-    height: 100%;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    background: url('5641363.jpg') no-repeat center center/cover;
+    background: url('image.png') no-repeat center center/cover;
     color: #1e1e1e;
     position: relative;
 }
 
-/* Background Overlay */
+/* Add overlay for better readability */
 body::before {
     content: "";
     position: absolute;
@@ -21,11 +21,11 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(255, 255, 255, 0.6); /* Light overlay effect */
+    background: rgba(255, 255, 255, 0.5); /* Adjust transparency */
     z-index: 1;
 }
 
-/* Content Container */
+/* Main container */
 .container {
     position: relative;
     z-index: 2;
@@ -36,33 +36,15 @@ h1 {
     font-size: 60px;
     font-weight: bold;
     margin-bottom: 10px;
-    color: #1e1e1e;
 }
 
-/* Subtitle Styling */
+/* Subtitle */
 .subtitle {
     font-size: 24px;
     font-weight: 300;
 }
 
-/* Dynamic Text Effect */
 .subtitle span {
     font-weight: bold;
-    color: #007bff;
-}
-
-/* Social Icons */
-.social-icons {
-    margin-top: 20px;
-}
-
-.social-icons a {
-    margin: 0 10px;
-    font-size: 24px;
-    color: #1e1e1e;
-    transition: color 0.3s ease;
-}
-
-.social-icons a:hover {
     color: #007bff;
 }

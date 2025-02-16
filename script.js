@@ -4,7 +4,7 @@ let index = 0;
 function changeText() {
     let textElement = document.getElementById("changing-text");
     
-    // Fade out
+    // Fade out effect
     textElement.style.opacity = 0;
     
     setTimeout(() => {
@@ -12,7 +12,7 @@ function changeText() {
         textElement.textContent = roles[index];
         index = (index + 1) % roles.length;
         
-        // Fade in
+        // Fade in effect
         textElement.style.opacity = 1;
     }, 500); // Matches CSS transition time
 }

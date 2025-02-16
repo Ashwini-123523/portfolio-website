@@ -47,8 +47,8 @@ p {
 /* Highlighted changing text */
 #changing-text {
     font-weight: bold;
-    color: #ff5733; /* Highlight color */
-    background: rgba(255, 87, 51, 0.2); /* Light highlight background */
+    color: #007BFF; /* Blue color */
+    background: rgba(0, 123, 255, 0.2); /* Light blue highlight */
     padding: 5px 10px;
     border-radius: 5px;
     transition: opacity 0.5s ease-in-out;

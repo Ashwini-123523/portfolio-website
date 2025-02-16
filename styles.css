@@ -1,82 +1,80 @@
-/* General Styles */
+/* Apply background image */
 body {
+    background-image: url('5641363.jpg'); /* Ensure this image is in your project folder */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
     font-family: 'Arial', sans-serif;
-    background-color: #f8f9fa;
-    color: #333;
+    color: #ffffff; /* White text for contrast */
     margin: 0;
     padding: 0;
 }
 
-/* Header Section */
-header {
-    background: linear-gradient(to right, #ffffff, #e3e3e3);
+/* Container for content with semi-transparent background */
+.container {
+    background: rgba(0, 0, 0, 0.7); /* Slightly transparent black for readability */
     padding: 20px;
-    text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-header h1 {
-    font-size: 28px;
-    font-weight: bold;
-}
-header p {
-    font-size: 16px;
-    color: #555;
+    border-radius: 10px;
+    max-width: 80%;
+    margin: auto;
+    margin-top: 20px;
 }
 
-/* Navigation Bar */
-nav {
-    display: flex;
-    justify-content: center;
-    background: #ffffff;
+/* Header styles */
+header {
+    background: rgba(0, 0, 0, 0.9);
     padding: 15px 0;
-    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.1);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+    text-align: center;
 }
-nav a {
-    margin: 0 15px;
+
+header h1 {
+    margin: 0;
+    font-size: 28px;
+}
+
+/* Navbar */
+.navbar {
+    text-align: center;
+    padding: 10px 0;
+}
+
+.navbar a {
     text-decoration: none;
-    color: #333;
-    font-weight: bold;
+    color: #ffffff;
+    margin: 0 15px;
+    font-size: 18px;
     transition: color 0.3s ease-in-out;
 }
-nav a:hover {
-    color: #007bff;
+
+/* Hover effect */
+.navbar a:hover {
+    color: #00bfff; /* Light blue color on hover */
 }
 
-/* Section Styling */
-section {
-    margin: 40px auto;
-    padding: 20px;
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 800px;
-}
-section h2 {
-    border-bottom: 2px solid #007bff;
-    padding-bottom: 5px;
-}
-
-/* Hover Effects */
+/* Card style for sections */
 .card {
-    background: #fff;
-    padding: 15px;
-    border-radius: 8px;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 10px;
+    max-width: 70%;
+    text-align: center;
 }
+
+/* Hover effect for cards */
 .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    background: rgba(255, 255, 255, 0.3);
+    transition: 0.3s ease-in-out;
 }
 
 /* Footer */
 footer {
     text-align: center;
-    padding: 15px;
-    background: #ffffff;
-    color: #555;
-    margin-top: 20px;
-    border-top: 1px solid #ddd;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.9);
+    color: #ffffff;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
+

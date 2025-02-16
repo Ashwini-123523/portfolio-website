@@ -8,10 +8,14 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
-    background: url('rm118-ken-12.jpg') no-repeat center center/cover;
+    background-image: url('rm118-ken-12.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     color: #1e1e1e;
     position: relative;
 }
+
 
 /* Add overlay for better readability */
 body::before {

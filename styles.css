@@ -2,24 +2,34 @@
 body {
     font-family: 'Arial', sans-serif;
     text-align: center;
-    background: url('rm118-ken-12.jpg') no-repeat center center fixed;
-    background-size: cover; /* Ensures full coverage */
+    background: url('image.png') no-repeat center center fixed;
+    background-size: cover;
     color: #000;
     margin: 0;
     padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ensures full viewport height */
+}
+
+/* Container */
+.container {
+    position: relative;
 }
 
 /* Name Styling */
 h1 {
     font-size: 48px;
     font-weight: bold;
-    margin-top: 100px;
+    margin-bottom: 10px;
 }
 
-/* Role Styling */
+/* Rotating Text */
 .role {
     font-size: 24px;
     margin-top: 10px;
+    display: inline-block;
 }
 
 .highlight {
@@ -27,12 +37,25 @@ h1 {
     color: #fff;
     padding: 5px 10px;
     border-radius: 5px;
+    animation: changeRole 4s infinite;
+}
+
+/* Animation for Rotating Role Titles */
+@keyframes changeRole {
+    0%, 33% { content: "Data Scientist"; }
+    34%, 66% { content: "Data Engineer"; }
+    67%, 100% { content: "Data Analyst"; }
+}
+
+.highlight::after {
+    content: "Data Scientist";
+    animation: changeRole 4s infinite;
 }
 
 /* Icon Section */
 .icon-container {
     display: flex;
-    justify-content: center;  /* Center icons horizontally */
+    justify-content: center;
     align-items: center;
     gap: 40px;
     margin-top: 30px;
@@ -46,11 +69,9 @@ h1 {
     font-size: 20px;
     color: #007BFF;
     cursor: pointer;
-    transition: transform 0.3s ease;
-}
-
-.icon-box:hover {
-    transform: scale(1.1);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
 .icon-box i {
@@ -63,15 +84,13 @@ h1 {
     font-size: 18px;
 }
 
-/* Fade-in Animation */
-.fade-in {
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeInUp 0.5s forwards;
-}
+/* Pop-up Animation */
+.icon-box:nth-child(1) { animation: popUp 0.5s ease forwards 0.3s; }
+icon-box:nth-child(2) { animation: popUp 0.5s ease forwards 0.6s; }
+.icon-box:nth-child(3) { animation: popUp 0.5s ease forwards 0.9s; }
+.icon-box:nth-child(4) { animation: popUp 0.5s ease forwards 1.2s; }
 
-/* Keyframes */
-@keyframes fadeInUp {
+@keyframes popUp {
     from {
         opacity: 0;
         transform: translateY(20px);

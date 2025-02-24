@@ -9,19 +9,20 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     setInterval(changeDesignation, 3000);
 
+    // Smooth scrolling to sections
     document.getElementById("about").addEventListener("click", function () {
-        alert("About section coming soon!");
+        document.getElementById("about-section").scrollIntoView({ behavior: "smooth" });
     });
 
     document.getElementById("skills").addEventListener("click", function () {
-        alert("Skills section coming soon!");
+        document.getElementById("skills-section").scrollIntoView({ behavior: "smooth" });
     });
 
     document.getElementById("experience").addEventListener("click", function () {
-        alert("Experience section coming soon!");
+        document.getElementById("experience-section").scrollIntoView({ behavior: "smooth" });
     });
 
     document.getElementById("contact").addEventListener("click", function () {
-        alert("Contact section coming soon!");
+        document.getElementById("contact-section").scrollIntoView({ behavior: "smooth" });
     });
 });

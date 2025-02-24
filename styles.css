@@ -1,12 +1,20 @@
 body {
     font-family: Arial, sans-serif;
     text-align: center;
-    background-color: #7f8c8d;
+    background: url('rm118-ken-12.jpg') no-repeat center center fixed;
+    background-size: cover;
     color: black;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .container {
-    margin-top: 50px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
 }
 
 h1 {
@@ -40,4 +48,14 @@ h1 {
 .icon i {
     font-size: 2em;
     margin-bottom: 5px;
+}
+
+@keyframes fade {
+    0%, 100% { opacity: 0; }
+    50% { opacity: 1; }
+}
+
+.designation {
+    display: inline-block;
+    animation: fade 3s infinite;
 }

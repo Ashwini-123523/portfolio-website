@@ -1,21 +1,27 @@
-const roles = ["Data Scientist", "Data Engineer", "Data Analyst"];
-let index = 0;
-
-function changeText() {
-    let textElement = document.getElementById("changing-text");
+document.addEventListener("DOMContentLoaded", function () {
+    const designations = ["Data Scientist", "Machine Learning Engineer", "Big Data Engineer"];
+    let index = 0;
+    const designationElement = document.querySelector(".designation");
     
-    // Fade out effect
-    textElement.style.opacity = 0;
+    function changeDesignation() {
+        designationElement.textContent = designations[index];
+        index = (index + 1) % designations.length;
+    }
+    setInterval(changeDesignation, 3000);
     
-    setTimeout(() => {
-        // Change text
-        textElement.textContent = roles[index];
-        index = (index + 1) % roles.length;
-        
-        // Fade in effect
-        textElement.style.opacity = 1;
-    }, 500); // Matches CSS transition time
-}
-
-// Change every 2 seconds
-setInterval(changeText, 2000);
+    document.getElementById("about").addEventListener("click", function () {
+        alert("About section coming soon!");
+    });
+    
+    document.getElementById("skills").addEventListener("click", function () {
+        alert("Skills section coming soon!");
+    });
+    
+    document.getElementById("experience").addEventListener("click", function () {
+        alert("Experience section coming soon!");
+    });
+    
+    document.getElementById("contact").addEventListener("click", function () {
+        alert("Contact section coming soon!");
+    });
+});
